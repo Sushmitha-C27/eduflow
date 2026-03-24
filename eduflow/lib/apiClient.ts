@@ -44,8 +44,8 @@ apiClient.interceptors.response.use(
         );
 
         const tokens = refreshResponse.data;
-        useAuthStore.getState().setTokens(tokens);
-
+        useAuthStore.getState().setTokens(tokens.accessToken);
+        
         originalRequest.headers = originalRequest.headers ?? {};
         originalRequest.headers.Authorization = `Bearer ${tokens.accessToken}`;
 
