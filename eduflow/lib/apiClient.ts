@@ -45,12 +45,12 @@ apiClient.interceptors.response.use(
 
         const tokens = refreshResponse.data;
         useAuthStore.getState().setTokens(tokens.accessToken);
-        
+
         originalRequest.headers = originalRequest.headers ?? {};
         originalRequest.headers.Authorization = `Bearer ${tokens.accessToken}`;
 
         return apiClient(originalRequest as AxiosRequestConfig);
-      } catch  {
+      } catch {
         useAuthStore.getState().logout();
 
         if (typeof window !== "undefined") {
