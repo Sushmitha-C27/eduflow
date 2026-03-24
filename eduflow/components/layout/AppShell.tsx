@@ -29,7 +29,6 @@ export const AppShell: React.FC<AppShellProps> = ({
                 "radial-gradient(circle at top, rgba(232,184,75,0.09), transparent 55%), var(--ink-2)",
             }}
           >
-            {/* <SubjectSidebar /> */}
           </aside>
         )}
         <div
