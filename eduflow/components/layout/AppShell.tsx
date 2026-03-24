@@ -1,6 +1,6 @@
 import React from "react";
 import { TopBar } from "./TopBar";
-import { SubjectSidebar } from "../sidebar/SubjectSidebar";
+
 
 interface AppShellProps {
   children: React.ReactNode;
