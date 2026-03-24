@@ -18,7 +18,7 @@ export const useSidebarStore = create<SidebarState>((set, get) => ({
   async fetchTree(subjectId: string) {
     set({ loading: true, error: null });
     try {
-      const tree = await get<SubjectTree>(`/subjects/${subjectId}/tree`);
+      const tree = (await get(`/subjects/${subjectId}/tree`)) as SubjectTree;
       set({ tree, loading: false });
     } catch (error) {
       set({
