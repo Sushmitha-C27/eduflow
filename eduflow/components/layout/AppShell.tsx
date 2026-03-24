@@ -22,7 +22,7 @@ export const AppShell: React.FC<AppShellProps> = ({
         }}
       >
         {showSidebar && (
-          <aside
+          <aside 
             style={{
               borderRight: "1px solid rgba(255,255,255,0.05)",
               background:
